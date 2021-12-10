@@ -1,7 +1,9 @@
 # README
 
+
 ## Introduction
 This is a web application created for the American Nuclear Society at TAMU. It allows users to check their attendance points for different ANS events, and for ANS officers or admins to create events and manage point counts for all members.
+
 
 ## Requirements
 This code has been run and tested on:
@@ -12,10 +14,12 @@ This code has been run and tested on:
 - Node - 12.4.0
 - Yarn - 1.22.4
 
+
 ## External Dependencies
 - Docker - https://www.docker.com/products/docker-desktop
 - Heroku CLI - https://devcenter.heroku.com/articles/heroku-cli
 - Git - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 
 ## Installation
 
@@ -28,9 +32,15 @@ Make a directory called ANSPoints wherever you like & move into it:
 Clone this repository:
 <code>git clone https://github.com/anspoints/anspoints_app.git</code>
 
+
 ## Tests
 
 Run the rspec test suite: <code>rspec ./spec</code>
+
+Run the rubocop tests: <code>rubocop</code>
+
+Run the brakeman tests: <code>brakeman</code>
+
 
 ## Execute Code
 
@@ -43,7 +53,16 @@ For Windows:
 If you accidentally quit:
 <code>docker exec -it "container-name" bash</code>
 
-In the Docker image, create the database:
+In the Docker image, cd to the anspoints_app directory:
+<code>cd ANSPoints/anspoints_app</code>
+
+Install all gems:
+<code>bundle install</code>
+
+Install npm:
+<code>npm install</code>
+
+Create the database:
 <code>rails db:create</code>
 
 Migrate the database:
@@ -52,12 +71,11 @@ Migrate the database:
 Run the server:
 <code>rails s --binding=0.0.0.0</code>
 
-**Development Notes**
-Avoid using scaffolding as it creates extra files & may produce unanticipated side-effects
 
 ## Environmental Variables/Files
 
 Refer to <code>/config/environments/development.rb</code>
+
 
 ## Deployment
 
@@ -79,6 +97,7 @@ Now click on the new staging app and click Deploy using the main branch for Auto
 
 Congrats you now have a deployment pipeling up and running that will update after any new push to the repo.
 
+
 ## CI/CD
 
 To set up the CI/CD Process we are going to use Github actions
@@ -93,11 +112,13 @@ Now commit and push the changes to github
 
 With this commit everytime you make any changes and push them, github actions will run all our Rspec, RuboCop and Brakeman tests to verfiy the new changes they pass. Then with our automatic heroku deployment set up in the previous section you will see a live update of the app.
 
+
 **Test Site:**
 https://anspoints-test-app.herokuapp.com/
 
 **Production Site**
 https://anspoints.herokuapp.com/
+
 
 ## Support
 
@@ -105,6 +126,6 @@ https://anspoints.herokuapp.com/
 
 **Admin Manual:** (Maintenance, Deployment, Instructions, etc.): https://github.com/anspoints/anspoints_app/wiki/Admin-Manual
 
-**Video Demo of Installation Guide:** https://drive.google.com/file/d/1PHHmOfkxdzi5C-llhX7PsU-EyMeJ7z9h/view?usp=sharing
+**Video Demo of Installation Guide:** https://drive.google.com/file/d/1St4ao2TzzNtXRiZx-FRI8CKiPWMI00rG/view?usp=sharing
 
-If additional assistance is required, please reach out to the customer.
+These manuals are also available directly through the web application. If additional assistance is required, please reach out to the customer.
